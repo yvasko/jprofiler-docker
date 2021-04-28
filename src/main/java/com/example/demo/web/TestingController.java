@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestingController {
+    @GetMapping("/")
+    public String health() {
+        return "OK";
+    }
+
     @GetMapping("/test")
     public String test() throws InterruptedException {
         for (int i = 0; i < 20; i++) {
